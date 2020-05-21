@@ -1,4 +1,4 @@
-this is the first time I'm trying to use Vim in Ubuntu, have fun!
+This is the first time I'm trying to use Vim in Ubuntu, have fun!
 Hello, Vim!
 
 Issues:
