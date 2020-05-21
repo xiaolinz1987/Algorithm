@@ -23,4 +23,7 @@ Issues:
 7. How to make print() of Python not to change lines by default
    [Solution] https://blog.csdn.net/dcrmg/article/details/79091926
 
+8. How to make Vim a Python IDE
+   [Solution] https://jianshu.com/p/f0513d18742a
+
 
