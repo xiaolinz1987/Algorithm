@@ -43,6 +43,9 @@ class MyArray:
 
     def remove(self, index):
         self.__assert_index(index)
+        for i in range(index, self.size-1):
+            self.array[i] = self.array[i+1]
+        self.size -= 1
 
     def output(self):
         for i in range(self.size):
@@ -65,4 +68,6 @@ array.output()
 array.insert_v2(0, 41)
 array.output()
 array.insert_v2(0, 58)
+array.output()
+array.remove(1)
 array.output()
