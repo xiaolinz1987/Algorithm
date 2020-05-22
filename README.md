@@ -25,3 +25,6 @@ Issues:
 
 8. How to run Python code in Vim with F5
    https://stackoverflow.com/questions/18948491/running-python-code-in-vim
+
+9. How to enable YouCompleteMe plugin
+   http://my.oschina.net/lifeisshort/blog/2979159	
