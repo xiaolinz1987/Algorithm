@@ -21,7 +21,7 @@ Issues:
    https://jianshu.com/p/f0513d18742a
 
 7. How to comment code in .vimrc
-   https://cloud.tecent.com/developer/rask/29397
+   https://cloud.tencent.com/developer/ask/29397
 
 8. How to run Python code in Vim with F5
    https://stackoverflow.com/questions/18948491/running-python-code-in-vim
