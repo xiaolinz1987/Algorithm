@@ -20,6 +20,7 @@ def create_binary_tree(input_list=[]):
 def pre_order_traversal(node):
     if node is None:
         return
+    
     print(node.data, end = ' ')
     pre_order_traversal(node.left)
     pre_order_traversal(node.right)
@@ -43,6 +44,18 @@ def post_order_traversal(node):
     print(node.data, end = ' ')
     return node
 
+def pre_order_traversal_with_stack(node):
+    stack = []
+    while node is not None or len(stack) > 0:
+        while node is not None:
+            print(node.data, end = ' ')
+            stack.append(node)
+            node = node.left
+
+        if len(stack) > 0:
+            node = stack.pop()
+            node = node.right
+
 my_input_list = list([3, 2, 9, None, None, 10, None, None, 8, None, 4])
 root = create_binary_tree(my_input_list)
 print("Pre-order traversal:")
@@ -51,4 +64,6 @@ print("\nIn-order traversal:")
 in_order_traversal(root)
 print("\nPost-order traversal:")
 post_order_traversal(root)
+print("\nPre-order traversal with stack:")
+pre_order_traversal_with_stack(root)
 
