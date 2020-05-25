@@ -27,4 +27,7 @@ Issues:
    https://stackoverflow.com/questions/18948491/running-python-code-in-vim
 
 9. How to enable YouCompleteMe plugin
-   http://my.oschina.net/lifeisshort/blog/2979159	
+   http://my.oschina.net/lifeisshort/blog/2979159
+
+10. How to do traversal over binary trees with Python
+   https://blog.csdn.net/m0_37324740/article/details/82763901

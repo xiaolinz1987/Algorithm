@@ -26,6 +26,18 @@ def pre_order_traversal(node):
     pre_order_traversal(node.right)
     return node
 
+def pre_order_traversal_with_stack(node):
+    stack = []
+    while node is not None or len(stack) > 0:
+        while node is not None:
+            print(node.data, end = ' ')
+            stack.append(node)
+            node = node.left
+            
+        if len(stack) > 0:
+            node = stack.pop()
+            node = node.right
+
 def in_order_traversal(node):
     if node is None:
         return
@@ -35,6 +47,18 @@ def in_order_traversal(node):
     in_order_traversal(node.right)
     return node
 
+def in_order_traversal_with_stack(node):
+    stack = []
+    while node is not None or len(stack) > 0:
+        while node is not None:
+            stack.append(node)
+            node = node.left
+
+        if len(stack) > 0:
+            node = stack.pop()
+            print(node.data, end = ' ')
+            node = node.right
+
 def post_order_traversal(node):
     if node is None:
         return
@@ -42,28 +66,34 @@ def post_order_traversal(node):
     post_order_traversal(node.left)
     post_order_traversal(node.right)
     print(node.data, end = ' ')
-    return node
 
-def pre_order_traversal_with_stack(node):
-    stack = []
-    while node is not None or len(stack) > 0:
-        while node is not None:
-            print(node.data, end = ' ')
-            stack.append(node)
-            node = node.left
+def post_order_traversal_with_stack(node):
+    stack = [node]
+    stack_assit = []
+    while len(stack) > 0:
+        node = stack.pop()
+        stack_assit.append(node)
 
-        if len(stack) > 0:
-            node = stack.pop()
-            node = node.right
+        if node.left is not None:
+            stack.append(node.left)
+        if node.right is not None:
+            stack.append(node.right)
 
+    while len(stack_assit) > 0:
+        print(stack_assit.pop().data, end = ' ')
+   
 my_input_list = list([3, 2, 9, None, None, 10, None, None, 8, None, 4])
 root = create_binary_tree(my_input_list)
 print("Pre-order traversal:")
 pre_order_traversal(root)
-print("\nIn-order traversal:")
-in_order_traversal(root)
-print("\nPost-order traversal:")
-post_order_traversal(root)
 print("\nPre-order traversal with stack:")
 pre_order_traversal_with_stack(root)
+print("\nIn-order traversal:")
+in_order_traversal(root)
+print("\nIn-order traversal with stack:")
+in_order_traversal_with_stack(root)
+print("\nPost-order traversal:")
+post_order_traversal(root)
+print("\nPost-order traversal with stack:")
+post_order_traversal_with_stack(root)
 
