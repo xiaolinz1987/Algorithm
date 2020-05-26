@@ -3,7 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
-class LinkedList:
+class MyLinkedList:
     def __init__(self):
         self.size = 0
         self.head = None
@@ -64,7 +64,7 @@ class LinkedList:
         print()
 
 """
-linkedList = LinkedList()
+linkedList = MyLinkedList()
 linkedList.insert(3, 0)
 linkedList.output()
 linkedList.insert(4, 0)
