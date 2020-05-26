@@ -81,7 +81,18 @@ def post_order_traversal_with_stack(node):
 
     while len(stack_assit) > 0:
         print(stack_assit.pop().data, end = ' ')
-   
+
+def level_order_traversal(node):
+    queue = Queue()
+    queue.put(node)
+    while not queue.empty():
+        node = queue.get()
+        print(node.data, end = ' ')
+        if node.left is not None:
+            queue.put(node.left)
+        if node.right is not None:
+            queue.put(node.right)
+
 my_input_list = list([3, 2, 9, None, None, 10, None, None, 8, None, 4])
 root = create_binary_tree(my_input_list)
 print("Pre-order traversal:")
@@ -96,4 +107,6 @@ print("\nPost-order traversal:")
 post_order_traversal(root)
 print("\nPost-order traversal with stack:")
 post_order_traversal_with_stack(root)
+print("\nLevel-order traversal:")
+#level_order_traversal(root)
 
