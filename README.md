@@ -31,3 +31,6 @@ Issues:
 
 10. How to do traversal over binary trees with Python
    https://blog.csdn.net/m0_37324740/article/details/82763901
+
+11. How to import Python class from another file
+   https://stackoverflow.com/questions/52601337/python-error-importing-class-from-another-file/52603583
