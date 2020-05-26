@@ -1,116 +1,141 @@
+import sys
+sys.path.append('../')
+from utils.queue import MyQueue
+
 class TreeNode:
     def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
 
-def create_binary_tree(input_list=[]):
-    if input_list is None or len(input_list) == 0:
-        return None
+class MyTree:
+    def __init__(self, input_list):
+        self.list = input_list
+        self.root = self.__create_binary_tree()
+
+    def __create_binary_tree(self):
+        if self.list is None or len(self.list) == 0:
+            return None
     
-    data = input_list.pop(0)
-    if data is None:
-        return None
+        data = self.list.pop(0)
+        if data is None:
+            return None
     
-    node = TreeNode(data)
-    node.left = create_binary_tree(input_list)
-    node.right = create_binary_tree(input_list)
-    return node
+        node = TreeNode(data)
+        node.left = self.__create_binary_tree()
+        node.right = self.__create_binary_tree()
+        return node
 
-def pre_order_traversal(node):
-    if node is None:
-        return
+    def __pre_order_traversal_core(self, node):
+        if node is None:
+            return
     
-    print(node.data, end = ' ')
-    pre_order_traversal(node.left)
-    pre_order_traversal(node.right)
-    return node
-
-def pre_order_traversal_with_stack(node):
-    stack = []
-    while node is not None or len(stack) > 0:
-        while node is not None:
-            print(node.data, end = ' ')
-            stack.append(node)
-            node = node.left
-            
-        if len(stack) > 0:
-            node = stack.pop()
-            node = node.right
-
-def in_order_traversal(node):
-    if node is None:
-        return
-    
-    in_order_traversal(node.left)
-    print(node.data, end = ' ')
-    in_order_traversal(node.right)
-    return node
-
-def in_order_traversal_with_stack(node):
-    stack = []
-    while node is not None or len(stack) > 0:
-        while node is not None:
-            stack.append(node)
-            node = node.left
-
-        if len(stack) > 0:
-            node = stack.pop()
-            print(node.data, end = ' ')
-            node = node.right
-
-def post_order_traversal(node):
-    if node is None:
-        return
-
-    post_order_traversal(node.left)
-    post_order_traversal(node.right)
-    print(node.data, end = ' ')
-
-def post_order_traversal_with_stack(node):
-    stack = [node]
-    stack_assit = []
-    while len(stack) > 0:
-        node = stack.pop()
-        stack_assit.append(node)
-
-        if node.left is not None:
-            stack.append(node.left)
-        if node.right is not None:
-            stack.append(node.right)
-
-    while len(stack_assit) > 0:
-        print(stack_assit.pop().data, end = ' ')
-
-import sys
-sys.path.append('../')
-from utils.queue import MyQueue
-
-def level_order_traversal(node):
-    q = MyQueue(10000)
-    q.enqueue(node)
-    while not q.empty():
-        node = q.dequeue()
         print(node.data, end = ' ')
-        if node.left is not None:
-            q.enqueue(node.left)
-        if node.right is not None:
-            q.enqueue(node.right)
+        self.__pre_order_traversal_core(node.left)
+        self.__pre_order_traversal_core(node.right)
 
+    def __pre_order_traversal_with_stack_core(self, node):
+        stack = []
+        while node is not None or len(stack) > 0:
+            while node is not None:
+                print(node.data, end = ' ')
+                stack.append(node)
+                node = node.left
+            
+            if len(stack) > 0:
+                node = stack.pop()
+                node = node.right
+
+    def __in_order_traversal_core(self, node):
+        if node is None:
+            return
+    
+        self.__in_order_traversal_core(node.left)
+        print(node.data, end = ' ')
+        self.__in_order_traversal_core(node.right)
+
+    def __in_order_traversal_with_stack_core(self, node):
+        stack = []
+        while node is not None or len(stack) > 0:
+            while node is not None:
+                stack.append(node)
+                node = node.left
+
+            if len(stack) > 0:
+                node = stack.pop()
+                print(node.data, end = ' ')
+                node = node.right
+
+    def __post_order_traversal_core(self, node):
+        if node is None:
+            return
+
+        self.__post_order_traversal_core(node.left)
+        self.__post_order_traversal_core(node.right)
+        print(node.data, end = ' ')
+
+    def __post_order_traversal_with_stack_core(self, node):
+        stack = [node]
+        stack_assit = []
+        while len(stack) > 0:
+            node = stack.pop()
+            stack_assit.append(node)
+
+            if node.left is not None:
+                stack.append(node.left)
+            if node.right is not None:
+                stack.append(node.right)
+
+        while len(stack_assit) > 0:
+            print(stack_assit.pop().data, end = ' ')
+
+    def __level_order_traversal_core(self, node):
+        q = MyQueue(10000)
+        q.enqueue(node)
+        while not q.empty():
+            node = q.dequeue()
+            print(node.data, end = ' ')
+            if node.left is not None:
+                q.enqueue(node.left)
+            if node.right is not None:
+                q.enqueue(node.right)
+
+    def pre_order_traversal(self):
+        self.__pre_order_traversal_core(self.root)
+
+    def pre_order_traversal_with_stack(self):
+        self.__pre_order_traversal_with_stack_core(self.root)
+
+    def in_order_traversal(self):
+        self.__in_order_traversal_core(self.root)
+
+    def in_order_traversal_with_stack(self):
+        self.__in_order_traversal_with_stack_core(self.root)
+
+    def post_order_traversal(self):
+        self.__post_order_traversal_core(self.root)
+
+    def post_order_traversal_with_stack(self):
+        self.__post_order_traversal_with_stack_core(self.root)
+
+    def level_order_traversal(self):
+        self.__level_order_traversal_core(self.root)
+
+"""
 my_input_list = list([3, 2, 9, None, None, 10, None, None, 8, None, 4])
-root = create_binary_tree(my_input_list)
+myTree = MyTree(my_input_list)
 print("Pre-order traversal:")
-pre_order_traversal(root)
+myTree.pre_order_traversal()
 print("\nPre-order traversal with stack:")
-pre_order_traversal_with_stack(root)
+myTree.pre_order_traversal_with_stack()
 print("\nIn-order traversal:")
-in_order_traversal(root)
+myTree.in_order_traversal()
 print("\nIn-order traversal with stack:")
-in_order_traversal_with_stack(root)
+myTree.in_order_traversal_with_stack()
 print("\nPost-order traversal:")
-post_order_traversal(root)
+myTree.post_order_traversal()
 print("\nPost-order traversal with stack:")
-post_order_traversal_with_stack(root)
+myTree.post_order_traversal_with_stack()
 print("\nLevel-order traversal:")
-level_order_traversal(root)
-
+myTree.level_order_traversal()
+"""
