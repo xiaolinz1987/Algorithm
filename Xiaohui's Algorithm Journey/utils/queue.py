@@ -17,6 +17,14 @@ class MyQueue:
         self.front = (self.front+1) % len(self.list)
         return dequeue_element
 
+    def __size(self):
+        return abs(self.end - self.front) % len(self.list)
+
+    def empty(self):
+        if self.__size() < 1:
+            return True
+        return False
+
     def output(self):
         i = self.front
         while i != self.end:
@@ -24,6 +32,7 @@ class MyQueue:
             i = (i+1) % len(self.list)
         print()
 
+"""
 myQueue = MyQueue(6)
 myQueue.enqueue(3)
 myQueue.output()
@@ -39,4 +48,4 @@ myQueue.enqueue(2)
 myQueue.output()
 myQueue.enqueue(4)
 myQueue.output()
-
+"""

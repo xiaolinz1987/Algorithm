@@ -82,16 +82,20 @@ def post_order_traversal_with_stack(node):
     while len(stack_assit) > 0:
         print(stack_assit.pop().data, end = ' ')
 
+import sys
+sys.path.append('../')
+from utils.queue import MyQueue
+
 def level_order_traversal(node):
-    queue = Queue()
-    queue.put(node)
-    while not queue.empty():
-        node = queue.get()
+    q = MyQueue(10000)
+    q.enqueue(node)
+    while not q.empty():
+        node = q.dequeue()
         print(node.data, end = ' ')
         if node.left is not None:
-            queue.put(node.left)
+            q.enqueue(node.left)
         if node.right is not None:
-            queue.put(node.right)
+            q.enqueue(node.right)
 
 my_input_list = list([3, 2, 9, None, None, 10, None, None, 8, None, 4])
 root = create_binary_tree(my_input_list)
@@ -108,5 +112,5 @@ post_order_traversal(root)
 print("\nPost-order traversal with stack:")
 post_order_traversal_with_stack(root)
 print("\nLevel-order traversal:")
-#level_order_traversal(root)
+level_order_traversal(root)
 
