@@ -16,7 +16,7 @@ class MyHeap:
             parent_index = (parent_index - 1) // 2
         self.list[child_index] = temp
 
-    def __down_adjust(self, parent_index, length):
+    def down_adjust(self, parent_index, length):
         temp = self.list[parent_index]
         child_index = parent_index * 2 + 1
         while child_index < length:
@@ -31,7 +31,7 @@ class MyHeap:
 
     def build(self):
         for i in range((len(self.list)-2) // 2, -1, -1):
-            self.__down_adjust(i, len(self.list))
+            self.down_adjust(i, len(self.list))
 
     def output(self):
         print(self.list)
