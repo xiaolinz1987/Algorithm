@@ -1,16 +1,5 @@
-my_list = [3, 1, 2, 5, 4, 9, 7, 2]
-#print(my_list[2])
-#print(my_list[3])
-
-my_list[3] = 10
-#print(my_list[3])
-
-#print(my_list)
-my_list.append(6)
-my_list.insert(5, 11)
-#print(my_list)
-
 class MyArray:
+
     def __init__(self, capacity):
         self.array = [None] * capacity
         self.size = 0

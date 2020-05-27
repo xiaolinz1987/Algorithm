@@ -1,4 +1,5 @@
 class MyBubbleSort:
+
     def __init__(self, input_array):
         self.array = input_array
     

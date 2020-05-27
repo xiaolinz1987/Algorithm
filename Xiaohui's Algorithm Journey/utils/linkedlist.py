@@ -1,9 +1,11 @@
 class Node:
+
     def __init__(self, data):
         self.data = data
         self.next = None
 
 class MyLinkedList:
+
     def __init__(self):
         self.size = 0
         self.head = None

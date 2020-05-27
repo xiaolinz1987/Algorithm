@@ -1,4 +1,5 @@
 class MyQueue:
+
     def __init__(self, capacity):
         self.list = [None] * capacity
         self.front = 0

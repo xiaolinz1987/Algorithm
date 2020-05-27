@@ -3,12 +3,14 @@ sys.path.append('../')
 from utils.queue import MyQueue
 
 class TreeNode:
+
     def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
 
 class MyTree:
+    
     def __init__(self, input_list):
         self.list = input_list
         self.root = self.__create_binary_tree()

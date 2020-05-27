@@ -1,4 +1,5 @@
 class MyPriorityQueue:
+
     def __init__(self):
         self.array = []
         self.size = 0
