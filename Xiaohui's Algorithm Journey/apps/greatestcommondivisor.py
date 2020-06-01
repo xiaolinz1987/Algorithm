@@ -61,6 +61,9 @@ class MyGreatestCommonDivisor:
     def calculate_v4(self):
         self.greatest_common_divisor = self.__calculate_v4_core(self.num1, self.num2)
 
+    def power_of_2(self):
+        return (self.greatest_common_divisor & self.greatest_common_divisor-1) == 0
+
     def output(self):
         print(self.greatest_common_divisor)
 
