@@ -102,7 +102,5 @@ while result is not None:
 for i in range(0, len(MAZE)):
     for j in range(0, len(MAZE[0])):
         if astar.contain_grid(path, i, j):
-            print("*, ", end = '')
-        else:
-            print(str(MAZE[i][j]) + ", ", end = '')
+            print("<" + str(i) + ", " + str(j) + ">", end = ' ')
 
