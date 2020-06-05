@@ -34,3 +34,9 @@ Issues:
 
 11. How to import Python class from another file
    https://stackoverflow.com/questions/52601337/python-error-importing-class-from-another-file/52603583
+
+12. How does Jenkins run
+   https://cnblogs.com/liyuanhong/p/6548925.html
+
+13. How to setup Jenkins build
+   https://blog.csdn.net/kefengwang/article/details/54233584
