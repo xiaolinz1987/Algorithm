@@ -40,3 +40,6 @@ Issues:
 
 13. How to setup Jenkins build
    https://blog.csdn.net/kefengwang/article/details/54233584
+
+14. How to install Jenkins in Ubuntu
+   http://digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-18-04
