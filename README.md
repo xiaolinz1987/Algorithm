@@ -55,3 +55,7 @@ Issues:
 
 18. How to fix 'invalid agent type docker' issue in Jenkins
 	https://stackoverflow.com/questions/62253474/jenkins-invalid-agent-type-docker-specified-must-be-one-of-any-label-none
+
+19. How to fix 'permission denied while trying to connect to the docker daemon socket' issue in Jenkins build
+	https://stackoverflow.com/questions/47854463/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke
+
