@@ -59,3 +59,5 @@ Issues:
 19. How to fix 'permission denied while trying to connect to the docker daemon socket' issue in Jenkins build
 	https://stackoverflow.com/questions/47854463/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke
 
+20. How to remove docker completely from Ubuntu
+	https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker
