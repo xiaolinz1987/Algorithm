@@ -41,7 +41,6 @@ class MyArray:
             print(self.array[i], end=' ')
         print()
 
-"""
 array = MyArray(4)
 array.insert_v1(0, 10)
 array.output()
@@ -61,4 +60,4 @@ array.insert_v2(0, 58)
 array.output()
 array.remove(1)
 array.output()
-"""
+

@@ -65,7 +65,6 @@ class MyLinkedList:
             p = p.next
         print()
 
-"""
 linkedList = MyLinkedList()
 linkedList.insert(3, 0)
 linkedList.output()
@@ -79,4 +78,4 @@ linkedList.insert(6, 1)
 linkedList.output()
 linkedList.remove(0)
 linkedList.output()
-"""
+

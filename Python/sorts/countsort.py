@@ -47,7 +47,6 @@ class MyCountSort:
     def output(self):
         print(self.sorted_array)
 
-"""
 input = list([4, 4, 6, 5, 3, 2, 8, 1, 7, 5, 6, 0, 10])
 sort = MyCountSort(input)
 sort.count_sort_v1()
@@ -58,4 +57,4 @@ sort.reset(input)
 sort.count_sort_v2()
 print("count_sort_v2:")
 sort.output()
-"""
+

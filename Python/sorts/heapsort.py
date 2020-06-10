@@ -20,9 +20,8 @@ class MyHeapSort:
     def output(self):
         print(self.array)
 
-"""
 input = list([3, 4, 14, 1, 5, 6, 7, 8, 1, -1, 0, 9, 11])
 sort = MyHeapSort(input)
 sort.heap_sort()
 sort.output()
-"""
+

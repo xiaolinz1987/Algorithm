@@ -123,7 +123,6 @@ class MyTree:
     def level_order_traversal(self):
         self.__level_order_traversal_core(self.root)
 
-"""
 my_input_list = list([3, 2, 9, None, None, 10, None, None, 8, None, 4])
 myTree = MyTree(my_input_list)
 print("Pre-order traversal:")
@@ -140,4 +139,4 @@ print("\nPost-order traversal with stack:")
 myTree.post_order_traversal_with_stack()
 print("\nLevel-order traversal:")
 myTree.level_order_traversal()
-"""
+

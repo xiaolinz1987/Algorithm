@@ -34,9 +34,8 @@ class MyBucketSort:
             for element in sub_list:
                 self.sorted_array.append(element)
 
-"""
 input = list([4.12, 6.421, 0.0023, 3.0, 2.123, 8.122, 4.12, 10.09])
 sort = MyBucketSort(input)
 sort.bucket_sort()
 sort.output()
-"""
+

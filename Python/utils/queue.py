@@ -33,7 +33,6 @@ class MyQueue:
             i = (i+1) % len(self.list)
         print()
 
-"""
 myQueue = MyQueue(6)
 myQueue.enqueue(3)
 myQueue.output()
@@ -49,4 +48,4 @@ myQueue.enqueue(2)
 myQueue.output()
 myQueue.enqueue(4)
 myQueue.output()
-"""
+

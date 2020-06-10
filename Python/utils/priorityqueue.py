@@ -48,7 +48,6 @@ class MyPriorityQueue:
         self.__down_adjust()
         return head
 
-"""
 queue = MyPriorityQueue()
 queue.enqueue(3)
 queue.enqueue(5)
@@ -60,4 +59,4 @@ print(queue.dequeue())
 print(queue.dequeue())
 print(queue.dequeue())
 print(queue.dequeue())
-"""
+

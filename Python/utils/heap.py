@@ -36,7 +36,6 @@ class MyHeap:
     def output(self):
         print(self.list)
 
-"""
 input = list([1, 3, 2, 6, 5, 7, 8, 9, 10, 0])
 myHeap = MyHeap(input)
 myHeap.up_adjust()
@@ -45,4 +44,4 @@ input = list([7, 1, 3, 10, 5, 2, 8, 9, 6])
 myHeap.reset_input(input)
 myHeap.build()
 myHeap.output()
-"""
+

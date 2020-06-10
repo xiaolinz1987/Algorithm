@@ -47,7 +47,6 @@ class MyBubbleSort:
     def output(self):
         print(self.array)
 
-"""
 input = list([3, 4, 14, 1, 5, 6, 7, 8, 1, -1, 0, 9, 11])
 sort = MyBubbleSort(input)
 sort.bubble_sort_v1()
@@ -61,4 +60,4 @@ sort.reset_input(input)
 sort.bubble_sort_v3()
 print("bubble_sort_v3:")
 sort.output()
-"""
+
