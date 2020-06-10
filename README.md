@@ -52,3 +52,6 @@ Issues:
 
 17. How to install Docker Engine on Ubuntu
 	https://docs.docker.com/engine/install/ubuntu
+
+18. How to fix 'invalid agent type docker' issue in Jenkins
+	https://stackoverflow.com/questions/62253474/jenkins-invalid-agent-type-docker-specified-must-be-one-of-any-label-none
