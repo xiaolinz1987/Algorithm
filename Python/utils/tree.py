@@ -1,6 +1,5 @@
 import sys
-sys.path.append('../')
-from utils.queue import MyQueue
+from queue import MyQueue
 
 class TreeNode:
 
