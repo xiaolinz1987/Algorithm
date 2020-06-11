@@ -61,3 +61,6 @@ Issues:
 
 20. How to remove docker completely from Ubuntu
 	https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker
+
+21. How to configure Jenkins to build after git push
+	https://blogs.sap.com/2015/12/15/configuring-jenkins-to-run-a-build-automatically-on-code-push/
