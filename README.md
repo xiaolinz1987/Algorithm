@@ -64,3 +64,9 @@ Issues:
 
 21. How to configure Jenkins to build after git push
 	https://blogs.sap.com/2015/12/15/configuring-jenkins-to-run-a-build-automatically-on-code-push/
+
+22. How to find context in files on Ubuntu
+	https://askubuntu.com/questions/127892/how-to-find-a-text-file-which-contains-a-specific-word-inside-not-in-its-name
+
+23. How to import modules from a relative path in another folder in Python
+	https://stackoverflow.com/questions/7505988/importing-from-a-relative-path-in-python
