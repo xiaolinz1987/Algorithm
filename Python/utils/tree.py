@@ -1,6 +1,5 @@
 import sys
-import os
-sys.path.append(os.environ['WORKSPACE'])
+sys.path.append('../')
 from utils.queue import MyQueue
 
 class TreeNode:
