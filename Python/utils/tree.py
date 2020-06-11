@@ -1,4 +1,3 @@
-import sys
 from queue import MyQueue
 
 class TreeNode:
