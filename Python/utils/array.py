@@ -36,28 +36,26 @@ class MyArray:
             self.array[i] = self.array[i+1]
         self.size -= 1
 
-    def output(self):
-        for i in range(self.size):
-            print(self.array[i], end=' ')
-        print()
+    def get_array(self):
+        return self.array
 
 array = MyArray(4)
 array.insert_v1(0, 10)
-array.output()
+print(array.get_array())
 array.insert_v1(0, 11)
-array.output()
+print(array.get_array())
 array.insert_v1(0, 15)
-array.output()
+print(array.get_array())
 array.insert_v1(0, 20)
-array.output()
+print(array.get_array())
 array.insert_v2(0, 29)
-array.output()
+print(array.get_array())
 array.insert_v2(0, 32)
-array.output()
+print(array.get_array())
 array.insert_v2(0, 41)
-array.output()
+print(array.get_array())
 array.insert_v2(0, 58)
-array.output()
+print(array.get_array())
 array.remove(1)
-array.output()
+print(array.get_array())
 
