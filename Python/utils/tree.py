@@ -1,4 +1,4 @@
-from queue import MyQueue
+import queue
 
 class TreeNode:
 
@@ -12,6 +12,7 @@ class MyTree:
     def __init__(self, input_list):
         self.list = input_list
         self.root = self.__create_binary_tree()
+        self.tree = []
 
     def __create_binary_tree(self):
         if self.list is None or len(self.list) == 0:
@@ -29,8 +30,8 @@ class MyTree:
     def __pre_order_traversal_core(self, node):
         if node is None:
             return
-    
-        print(node.data, end = ' ')
+
+        self.tree.append(node.data)
         self.__pre_order_traversal_core(node.left)
         self.__pre_order_traversal_core(node.right)
 
@@ -38,7 +39,7 @@ class MyTree:
         stack = []
         while node is not None or len(stack) > 0:
             while node is not None:
-                print(node.data, end = ' ')
+                self.tree.append(node.data)
                 stack.append(node)
                 node = node.left
             
@@ -51,7 +52,7 @@ class MyTree:
             return
     
         self.__in_order_traversal_core(node.left)
-        print(node.data, end = ' ')
+        self.tree.append(node.data)
         self.__in_order_traversal_core(node.right)
 
     def __in_order_traversal_with_stack_core(self, node):
@@ -63,7 +64,7 @@ class MyTree:
 
             if len(stack) > 0:
                 node = stack.pop()
-                print(node.data, end = ' ')
+                self.tree.append(node.data)
                 node = node.right
 
     def __post_order_traversal_core(self, node):
@@ -72,7 +73,7 @@ class MyTree:
 
         self.__post_order_traversal_core(node.left)
         self.__post_order_traversal_core(node.right)
-        print(node.data, end = ' ')
+        self.tree.append(node.data)
 
     def __post_order_traversal_with_stack_core(self, node):
         stack = [node]
@@ -87,54 +88,46 @@ class MyTree:
                 stack.append(node.right)
 
         while len(stack_assit) > 0:
-            print(stack_assit.pop().data, end = ' ')
+            self.tree.append(stack_assit.pop().data)
 
     def __level_order_traversal_core(self, node):
-        q = MyQueue(10000)
-        q.enqueue(node)
+        q = queue.Queue(10000)
+        q.put(node)
         while not q.empty():
-            node = q.dequeue()
-            print(node.data, end = ' ')
+            node = q.get()
+            self.tree.append(node.data)
             if node.left is not None:
-                q.enqueue(node.left)
+                q.put(node.left)
             if node.right is not None:
-                q.enqueue(node.right)
+                q.put(node.right)
 
     def pre_order_traversal(self):
+        self.tree = []
         self.__pre_order_traversal_core(self.root)
 
     def pre_order_traversal_with_stack(self):
+        self.tree = []
         self.__pre_order_traversal_with_stack_core(self.root)
 
     def in_order_traversal(self):
+        self.tree = []
         self.__in_order_traversal_core(self.root)
 
     def in_order_traversal_with_stack(self):
+        self.tree = []
         self.__in_order_traversal_with_stack_core(self.root)
 
     def post_order_traversal(self):
+        self.tree = []
         self.__post_order_traversal_core(self.root)
 
     def post_order_traversal_with_stack(self):
+        self.tree = []
         self.__post_order_traversal_with_stack_core(self.root)
 
     def level_order_traversal(self):
+        self.tree = []
         self.__level_order_traversal_core(self.root)
 
-my_input_list = list([3, 2, 9, None, None, 10, None, None, 8, None, 4])
-myTree = MyTree(my_input_list)
-print("Pre-order traversal:")
-myTree.pre_order_traversal()
-print("\nPre-order traversal with stack:")
-myTree.pre_order_traversal_with_stack()
-print("\nIn-order traversal:")
-myTree.in_order_traversal()
-print("\nIn-order traversal with stack:")
-myTree.in_order_traversal_with_stack()
-print("\nPost-order traversal:")
-myTree.post_order_traversal()
-print("\nPost-order traversal with stack:")
-myTree.post_order_traversal_with_stack()
-print("\nLevel-order traversal:")
-myTree.level_order_traversal()
-
+    def get_tree(self):
+        return self.tree
