@@ -11,7 +11,7 @@ pipeline {
 				sh 'python3 ./Python/test_utils/testlinkedlist.py'
 				sh 'python3 ./Python/utils/queue.py'
 				sh 'python3 ./Python/utils/tree.py'
-				sh 'python3 ./Python/utils/priorityqueue.py'
+				sh 'python3 ./Python/test_utils/testpriorityqueue.py'
 			}
 		}
 
