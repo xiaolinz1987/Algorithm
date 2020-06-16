@@ -38,19 +38,3 @@ class MyQueue:
         self.output()
         return self.queue
 
-myQueue = MyQueue(6)
-myQueue.enqueue(3)
-print(myQueue.get_queue())
-myQueue.enqueue(5)
-print(myQueue.get_queue())
-myQueue.enqueue(6)
-print(myQueue.get_queue())
-myQueue.dequeue()
-print(myQueue.get_queue())
-myQueue.dequeue()
-print(myQueue.get_queue())
-myQueue.enqueue(2)
-print(myQueue.get_queue())
-myQueue.enqueue(4)
-print(myQueue.get_queue())
-

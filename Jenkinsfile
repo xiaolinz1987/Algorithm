@@ -4,12 +4,12 @@ pipeline {
 
 	stages {
 
-		stage('compile utils') {
+		stage('unit test of utils') {
 			steps {
 				sh 'python3 ./Python/test_utils/testarray.py'
 				sh 'python3 ./Python/test_utils/testheap.py'
 				sh 'python3 ./Python/test_utils/testlinkedlist.py'
-				sh 'python3 ./Python/utils/queue.py'
+				sh 'python3 ./Python/test_utils/testqueue.py'
 				sh 'python3 ./Python/utils/tree.py'
 				sh 'python3 ./Python/test_utils/testpriorityqueue.py'
 			}
