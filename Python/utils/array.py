@@ -3,6 +3,7 @@ class MyArray:
     def __init__(self, capacity):
         self.array = [None] * capacity
         self.size = 0
+        self.result = []
 
     def __assert_index(self, index):
         if index < 0 or index > self.size:
@@ -36,26 +37,12 @@ class MyArray:
             self.array[i] = self.array[i+1]
         self.size -= 1
 
-    def get_array(self):
-        return self.array
+    def output(self):
+        self.result = []
+        for i in range(self.size):
+            self.result.append(self.array[i])
 
-array = MyArray(4)
-array.insert_v1(0, 10)
-print(array.get_array())
-array.insert_v1(0, 11)
-print(array.get_array())
-array.insert_v1(0, 15)
-print(array.get_array())
-array.insert_v1(0, 20)
-print(array.get_array())
-array.insert_v2(0, 29)
-print(array.get_array())
-array.insert_v2(0, 32)
-print(array.get_array())
-array.insert_v2(0, 41)
-print(array.get_array())
-array.insert_v2(0, 58)
-print(array.get_array())
-array.remove(1)
-print(array.get_array())
+    def get_array(self):
+        self.output()
+        return self.result
 
