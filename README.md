@@ -73,3 +73,6 @@ Issues:
 
 24. How to use unittest for Python
 	https://docs.python.org/zh-cn/3/library/unittest.html
+
+25. How to use Python Queue modules
+	https://blog.csdn.net/brucewong0516/article/details/84025027
