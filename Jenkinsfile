@@ -8,7 +8,7 @@ pipeline {
 			steps {
 				sh 'python3 ./Python/test_utils/testarray.py'
 				sh 'python3 ./Python/test_utils/testheap.py'
-				sh 'python3 ./Python/utils/linkedlist.py'
+				sh 'python3 ./Python/test_utils/testlinkedlist.py'
 				sh 'python3 ./Python/utils/queue.py'
 				sh 'python3 ./Python/utils/tree.py'
 				sh 'python3 ./Python/utils/priorityqueue.py'

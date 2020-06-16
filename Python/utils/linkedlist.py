@@ -70,17 +70,3 @@ class MyLinkedList:
         self.output()
         return self.list
 
-linkedList = MyLinkedList()
-linkedList.insert(3, 0)
-print(linkedList.get_list())
-linkedList.insert(4, 0)
-print(linkedList.get_list())
-linkedList.insert(9, 2)
-print(linkedList.get_list())
-linkedList.insert(5, 3)
-print(linkedList.get_list())
-linkedList.insert(6, 1)
-print(linkedList.get_list())
-linkedList.remove(0)
-print(linkedList.get_list())
-
