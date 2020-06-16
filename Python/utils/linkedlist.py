@@ -10,6 +10,7 @@ class MyLinkedList:
         self.size = 0
         self.head = None
         self.last = None
+        self.list = []
 
     def __assert(self, index):
         if index < 0 or index > self.size:
@@ -59,23 +60,27 @@ class MyLinkedList:
         return removed_node
 
     def output(self):
+        self.list = []
         p = self.head
         while p is not None:
-            print(p.data, end=' ')
+            self.list.append(p.data)
             p = p.next
-        print()
+    
+    def get_list(self):
+        self.output()
+        return self.list
 
 linkedList = MyLinkedList()
 linkedList.insert(3, 0)
-linkedList.output()
+print(linkedList.get_list())
 linkedList.insert(4, 0)
-linkedList.output()
+print(linkedList.get_list())
 linkedList.insert(9, 2)
-linkedList.output()
+print(linkedList.get_list())
 linkedList.insert(5, 3)
-linkedList.output()
+print(linkedList.get_list())
 linkedList.insert(6, 1)
-linkedList.output()
+print(linkedList.get_list())
 linkedList.remove(0)
-linkedList.output()
+print(linkedList.get_list())
 

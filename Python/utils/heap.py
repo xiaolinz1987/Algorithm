@@ -33,15 +33,15 @@ class MyHeap:
         for i in range((len(self.list)-2) // 2, -1, -1):
             self.down_adjust(i, len(self.list))
 
-    def output(self):
-        print(self.list)
+    def get_heap(self):
+        return self.list
 
 input = list([1, 3, 2, 6, 5, 7, 8, 9, 10, 0])
 myHeap = MyHeap(input)
 myHeap.up_adjust()
-myHeap.output()
+print(myHeap.get_heap())
 input = list([7, 1, 3, 10, 5, 2, 8, 9, 6])
 myHeap.reset_input(input)
 myHeap.build()
-myHeap.output()
+print(myHeap.get_heap())
 

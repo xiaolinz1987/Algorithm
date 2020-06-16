@@ -4,6 +4,7 @@ class MyQueue:
         self.list = [None] * capacity
         self.front = 0
         self.end = 0
+        self.queue = []
 
     def enqueue(self, element):
         if (self.end+1) % len(self.list) == self.front:
@@ -27,25 +28,29 @@ class MyQueue:
         return False
 
     def output(self):
+        self.queue = []
         i = self.front
         while i != self.end:
-            print(self.list[i], end = ' ')
+            self.queue.append(self.list[i])
             i = (i+1) % len(self.list)
-        print()
+    
+    def get_queue(self):
+        self.output()
+        return self.queue
 
 myQueue = MyQueue(6)
 myQueue.enqueue(3)
-myQueue.output()
+print(myQueue.get_queue())
 myQueue.enqueue(5)
-myQueue.output()
+print(myQueue.get_queue())
 myQueue.enqueue(6)
-myQueue.output()
+print(myQueue.get_queue())
 myQueue.dequeue()
-myQueue.output()
+print(myQueue.get_queue())
 myQueue.dequeue()
-myQueue.output()
+print(myQueue.get_queue())
 myQueue.enqueue(2)
-myQueue.output()
+print(myQueue.get_queue())
 myQueue.enqueue(4)
-myQueue.output()
+print(myQueue.get_queue())
 
