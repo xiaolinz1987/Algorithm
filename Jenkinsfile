@@ -6,8 +6,7 @@ pipeline {
 
 		stage('compile utils') {
 			steps {
-				sh 'python3 ./Python/utils/__init__.py'
-				sh 'python3 ./Python/utils/array.py'
+				sh 'python3 ./Python/test_utils/testarray.py'
 				sh 'python3 ./Python/utils/heap.py'
 				sh 'python3 ./Python/utils/linkedlist.py'
 				sh 'python3 ./Python/utils/queue.py'
