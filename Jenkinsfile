@@ -46,7 +46,7 @@ pipeline {
 				sh 'python3 ./Python/test_projects/testbitmap.py'
 				sh 'python3 ./Python/test_projects/testlrucache.py'
 				sh 'python3 ./Python/test_projects/testastarsearch.py'
-				sh 'python3 ./Python/projects/redpackage.py'
+				sh 'python3 ./Python/test_projects/testredpackage.py'
 			}
 		}
 	}

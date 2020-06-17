@@ -18,11 +18,6 @@ class MyRedPackage:
             self.packages.append(temp_money)
         self.packages.append(rest_money)
 
-    def output(self):
-        for package in self.packages:
-            print("Money: %.2f" % (package/100))
-
-red_package = MyRedPackage(1000, 10)
-red_package.divide()
-red_package.output()
+    def get_packages(self):
+        return self.packages
 
