@@ -30,7 +30,7 @@ pipeline {
 			steps {
 				sh 'python3 ./Python/test_apps/testbestgoldmining.py'
 				sh 'python3 ./Python/test_apps/testcyclelist.py'
-				sh 'python3 ./Python/apps/dictionarysort.py'
+				sh 'python3 ./Python/test_apps/testdictionarysort.py'
 				sh 'python3 ./Python/apps/greatestcommondivisor.py'
 				sh 'python3 ./Python/apps/greatestsorteddistance.py'
 				sh 'python3 ./Python/apps/lostnumber.py'

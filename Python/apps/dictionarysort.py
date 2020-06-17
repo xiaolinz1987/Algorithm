@@ -3,6 +3,7 @@ class MyDictionarySort:
     def __init__(self, input_array):
         self.array = input_array
         self.border_index = 0
+        self.result = []
 
     def reset(self, input_array):
         self.array = input_array
@@ -41,16 +42,10 @@ class MyDictionarySort:
         self.__reverse()
 
     def output(self):
+        self.result = []
         for i in self.array:
-            print(i, end = ' ')
-        print()
-
-array = list([1, 2, 3, 4, 5])
-sort = MyDictionarySort(array)
-sort.sort()
-sort.output()
-array = list([1, 3, 4, 5, 2])
-sort.reset(array)
-sort.sort()
-sort.output()
-
+            self.result.append(i)
+    
+    def get_array(self):
+        self.output()
+        return self.result
