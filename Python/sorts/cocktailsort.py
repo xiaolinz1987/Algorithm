@@ -27,11 +27,6 @@ class MyCockTailSort:
             if is_sorted:
                 break
     
-    def output(self):
-        print(self.array)
-
-input = list([3, 4, 14, 1, 5, 6, 7, 8, 1, -1, 0, 9, 11])
-sort = MyCockTailSort(input)
-sort.cock_tail_sort()
-sort.output()
+    def get_array(self):
+        return self.array
 

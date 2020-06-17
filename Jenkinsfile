@@ -19,7 +19,7 @@ pipeline {
 			steps {
 				sh 'python3 ./Python/test_sorts/testbubblesort.py'
 				sh 'python3 ./Python/test_sorts/testbucketsort.py'
-				sh 'python3 ./Python/sorts/cocktailsort.py'
+				sh 'python3 ./Python/test_sorts/testcocktailsort.py'
 				sh 'python3 ./Python/sorts/quicksort.py'
 				sh 'python3 ./Python/sorts/countsort.py'
 				sh 'python3 ./Python/sorts/heapsort.py'
