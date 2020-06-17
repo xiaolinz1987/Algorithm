@@ -6,7 +6,7 @@ pipeline {
 
 		stage('unit tests of utils') {
 			steps {
-				sh 'python3 ./Python/test_utils/testutils.py -v'
+				sh 'python3 ./Python/tests/testutils.py -v'
 			}
 		}
 
