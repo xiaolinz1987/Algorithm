@@ -43,12 +43,6 @@ class MyMedianSortedArray:
                 self.median = (max_of_left + min_of_right) / 2.0
                 return
 
-    def output(self):
-        print(self.median)
-
-array1 = list([3, 5, 6, 7, 8, 12, 20])
-array2 = list([1, 10, 17, 18])
-median = MyMedianSortedArray(array1, array2)
-median.calculate()
-median.output()
+    def get_median(self):
+        return self.median
 
