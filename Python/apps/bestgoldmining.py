@@ -36,7 +36,7 @@ class MyBestGoldMining:
                     result_table[i][j] = max(result_table[i-1][j], 
                             result_table[i-1][j-self.mining_workers[i-1]] + self.mining_amount[i-1])
 
-        self.result = result_table[len(self.mining_amount)][workers]
+        self.result = result_table[len(self.mining_amount)][self.workers]
 
     def mining_v3(self):
         result_table = [0] * (self.workers+1)
@@ -49,23 +49,6 @@ class MyBestGoldMining:
 
         self.result = result_table[self.workers]
 
-    def output(self):
-        print(self.result)
-
-workers = 10
-mines = 5
-mining_workers = list([5, 5, 3, 4, 3])
-mining_amount = list([400, 500, 200, 300, 350])
-mining = MyBestGoldMining(workers, mines, mining_workers, mining_amount)
-mining.mining_v1()
-print("mining_v1:")
-mining.output()
-mining.reset(workers, mines, mining_workers, mining_amount)
-mining.mining_v2()
-print("mining_v2:")
-mining.output()
-mining.reset(workers, mines, mining_workers, mining_amount)
-mining.mining_v3()
-print("mining_v3:")
-mining.output()
+    def get_mining(self):
+        return self.result
 
