@@ -44,17 +44,6 @@ class MyCountSort:
             self.sorted_array[count_array[self.array[i] - min_value] - 1] = self.array[i]
             count_array[self.array[i] - min_value] -= 1
 
-    def output(self):
-        print(self.sorted_array)
-
-input = list([4, 4, 6, 5, 3, 2, 8, 1, 7, 5, 6, 0, 10])
-sort = MyCountSort(input)
-sort.count_sort_v1()
-print("count_sort_v1:")
-sort.output()
-input = list([95, 94, 91, 98, 99, 90, 99, 93, 91, 92])
-sort.reset(input)
-sort.count_sort_v2()
-print("count_sort_v2:")
-sort.output()
+    def get_array(self):
+        return self.sorted_array
 

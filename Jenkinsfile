@@ -21,7 +21,7 @@ pipeline {
 				sh 'python3 ./Python/test_sorts/testbucketsort.py'
 				sh 'python3 ./Python/test_sorts/testcocktailsort.py'
 				sh 'python3 ./Python/test_sorts/testquicksort.py'
-				sh 'python3 ./Python/sorts/countsort.py'
+				sh 'python3 ./Python/test_sorts/testcountsort.py'
 				sh 'python3 ./Python/sorts/heapsort.py'
 			}
 		}
