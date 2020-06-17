@@ -36,7 +36,7 @@ pipeline {
 				sh 'python3 ./Python/test_apps/testlostnumber.py'
 				sh 'python3 ./Python/test_apps/testmediansortedarrays.py'
 				sh 'python3 ./Python/test_apps/testminstack.py'
-				sh 'python3 ./Python/apps/removekdigits.py'
+				sh 'python3 ./Python/test_apps/testremovekdigits.py'
 				sh 'python3 ./Python/apps/stackqueue.py'
 			}
 		}

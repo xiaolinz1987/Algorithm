@@ -58,22 +58,6 @@ class MyRemoveKDigits:
 
         self.result = "".join(stack)
 
-    def output(self):
-        print(self.result)
-
-removekdigits = MyRemoveKDigits("1593212", 3)
-removekdigits.remove_v1()
-print("remove_k_digits_v1:")
-removekdigits.output()
-removekdigits.reset("30200", 1)
-removekdigits.remove_v1()
-removekdigits.output()
-removekdigits.reset("10", 2)
-removekdigits.remove_v1()
-removekdigits.output()
-removekdigits.reset("1593212", 3)
-removekdigits.remove_v2()
-print("remove_k_digits_v2:")
-removekdigits.output()
-
+    def get_digits(self):
+        return self.result
         
