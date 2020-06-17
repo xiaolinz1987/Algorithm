@@ -22,11 +22,6 @@ class MyLostNumber:
             else:
                 self.result[1] ^= self.array[i]
 
-    def output(self):
-        print(self.result)
-
-input = list([4, 1, 2, 2, 5, 1, 4, 3])
-lost = MyLostNumber(input)
-lost.calculate()
-lost.output()
+    def get_lost_number(self):
+        return self.result
 

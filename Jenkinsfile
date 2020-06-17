@@ -33,7 +33,7 @@ pipeline {
 				sh 'python3 ./Python/test_apps/testdictionarysort.py'
 				sh 'python3 ./Python/test_apps/testgreatestcommondivisor.py'
 				sh 'python3 ./Python/test_apps/testgreatestsorteddistance.py'
-				sh 'python3 ./Python/apps/lostnumber.py'
+				sh 'python3 ./Python/test_apps/testlostnumber.py'
 				sh 'python3 ./Python/apps/mediansortedarrays.py'
 				sh 'python3 ./Python/apps/minstack.py'
 				sh 'python3 ./Python/apps/removekdigits.py'
