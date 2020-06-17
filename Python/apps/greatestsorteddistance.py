@@ -43,11 +43,6 @@ class MyGreatestSortedDistance:
                 self.greatest_sorted_distance = buckets[i].min - left_max
             left_max = buckets[i].max
     
-    def output(self):
-        print(self.greatest_sorted_distance)
-
-array = list([2, 6, 3, 5, 6, 10, 9])
-distance = MyGreatestSortedDistance(array)
-distance.calcuate()
-distance.output()
+    def get_greatest_sorted_distance(self):
+        return self.greatest_sorted_distance
 
