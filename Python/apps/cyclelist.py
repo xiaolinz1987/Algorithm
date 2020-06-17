@@ -1,8 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from utils.linkedlist import Node
-
 class MyCycleList:
 
     def __init__(self, node):
@@ -48,26 +43,9 @@ class MyCycleList:
                     self.cycle_start = p1
                     return
 
-    def output(self):
-        print("Cycle length:", end = ' ')
-        print(self.cycle_length)
-        print("Cycle start point:", end = ' ')
-        print(self.cycle_start.data)
+    def get_cycle_length(self):
+        return self.cycle_length
 
-node1 = Node(5)
-node2 = Node(3)
-node3 = Node(7)
-node4 = Node(2)
-node5 = Node(6)
-node1.next = node2
-node2.next = node3
-node3.next = node4
-node4.next = node5
-node5.next = node2
-
-cycle = MyCycleList(node1)
-cycle.check_cycle()
-cycle.check_cycle_length()
-cycle.check_cycle_start()
-cycle.output()
+    def get_cycle_start(self):
+        return self.cycle_start.data
 
