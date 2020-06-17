@@ -80,7 +80,7 @@ class MyAStarSearch:
                     return grid
 
         return None
-    
+
 MAZE = [
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 1, 0, 0, 0],
@@ -88,19 +88,4 @@ MAZE = [
         [0, 0, 0, 1, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0]
         ]
-
-start = Grid(2, 1)
-end = Grid(2, 5)
-astar = MyAStarSearch(start, end)
-result = astar.a_star_search()
-
-path = []
-while result is not None:
-    path.append(Grid(result.x, result.y))
-    result = result.parent
-
-for i in range(0, len(MAZE)):
-    for j in range(0, len(MAZE[0])):
-        if astar.contain_grid(path, i, j):
-            print("<" + str(i) + ", " + str(j) + ">", end = ' ')
 
