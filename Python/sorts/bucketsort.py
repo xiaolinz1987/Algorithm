@@ -4,8 +4,8 @@ class MyBucketSort:
         self.array = input_array
         self.sorted_array = []
 
-    def output(self):
-        print(self.sorted_array)
+    def get_array(self):
+        return self.sorted_array
 
     def bucket_sort(self):
         max_value = self.array[0]
@@ -33,9 +33,4 @@ class MyBucketSort:
         for sub_list in bucket_list:
             for element in sub_list:
                 self.sorted_array.append(element)
-
-input = list([4.12, 6.421, 0.0023, 3.0, 2.123, 8.122, 4.12, 10.09])
-sort = MyBucketSort(input)
-sort.bucket_sort()
-sort.output()
 
