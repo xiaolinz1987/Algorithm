@@ -64,28 +64,6 @@ class MyGreatestCommonDivisor:
     def power_of_2(self):
         return (self.greatest_common_divisor & self.greatest_common_divisor-1) == 0
 
-    def output(self):
-        print(self.greatest_common_divisor)
-
-greatestcommondivisor = MyGreatestCommonDivisor(25, 5)
-greatestcommondivisor.calculate_v1()
-print("greatest_common_divisor v1:")
-greatestcommondivisor.output()
-greatestcommondivisor.set(100, 75)
-greatestcommondivisor.calculate_v2()
-print("greatest_common_divisor v2:")
-greatestcommondivisor.output()
-greatestcommondivisor.set(99, 55)
-greatestcommondivisor.calculate_v3()
-print("greatest_common_divisor v3:")
-greatestcommondivisor.output()
-greatestcommondivisor.set(10000, 1)
-greatestcommondivisor.calculate_v4()
-print("greatest_common_divisor v4:")
-greatestcommondivisor.output()
-greatestcommondivisor.set(10000, 10001)
-greatestcommondivisor.calculate_v4()
-print("greatest_common_divisor v4:")
-greatestcommondivisor.output()
-
+    def get_greatest_common_divisor(self):
+        return self.greatest_common_divisor
 
