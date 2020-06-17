@@ -22,15 +22,3 @@ class MyMinStack:
 
         return self.min_stack[len(self.min_stack)-1]
 
-stack = MyMinStack()
-stack.push(4)
-stack.push(9)
-stack.push(7)
-stack.push(3)
-stack.push(8)
-stack.push(5)
-print(stack.get_min())
-stack.pop()
-stack.pop()
-stack.pop()
-print(stack.get_min())
