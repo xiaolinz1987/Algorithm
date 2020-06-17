@@ -1,4 +1,4 @@
-class MyMedianSortedArray:
+class MyMedianSortedArrays:
 
     def __init__(self, input_array_1, input_array_2):
         self.array1 = input_array_1
