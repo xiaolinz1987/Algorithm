@@ -12,12 +12,7 @@ pipeline {
 
 		stage('unit tests of sorts') {
 			steps {
-				sh 'python3 ./Python/test_sorts/testbubblesort.py'
-				sh 'python3 ./Python/test_sorts/testbucketsort.py'
-				sh 'python3 ./Python/test_sorts/testcocktailsort.py'
-				sh 'python3 ./Python/test_sorts/testquicksort.py'
-				sh 'python3 ./Python/test_sorts/testcountsort.py'
-				sh 'python3 ./Python/test_sorts/testheapsort.py'
+				sh 'python3 ./Python/tests/testsorts.py -v'
 			}
 		}
 
