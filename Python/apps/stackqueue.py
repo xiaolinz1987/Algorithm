@@ -19,13 +19,3 @@ class MyStackQueue:
             self.__transfer()
         return self.stack_b.pop()
 
-queue = MyStackQueue()
-queue.enqueue(1)
-queue.enqueue(2)
-queue.enqueue(3)
-print(queue.dequeue())
-print(queue.dequeue())
-queue.enqueue(4)
-print(queue.dequeue())
-print(queue.dequeue())
-
