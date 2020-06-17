@@ -44,7 +44,7 @@ pipeline {
 		stage('unit tests of projects') {
 			steps {
 				sh 'python3 ./Python/test_projects/testbitmap.py'
-				sh 'python3 ./Python/projects/lcucache.py'
+				sh 'python3 ./Python/test_projects/testlrucache.py'
 				sh 'python3 ./Python/projects/astarsearch.py'
 				sh 'python3 ./Python/projects/redpackage.py'
 			}

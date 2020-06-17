@@ -71,16 +71,3 @@ class MyLRUCache:
         self.__remove_node(node)
         self.hash.remove(key)
 
-lru = MyLRUCache(5)
-lru.put("001", "User1")
-print(lru.get("001"))
-lru.put("002", "User2")
-lru.put("003", "User3")
-lru.put("004", "User4")
-lru.put("005", "User5")
-print(lru.get("002"))
-lru.put("004", "User4 update")
-lru.put("006", "User6")
-print(lru.get("001"))
-print(lru.get("006"))
-
