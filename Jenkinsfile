@@ -6,12 +6,7 @@ pipeline {
 
 		stage('unit tests of utils') {
 			steps {
-				sh 'python3 ./Python/test_utils/testarray.py'
-				sh 'python3 ./Python/test_utils/testheap.py'
-				sh 'python3 ./Python/test_utils/testlinkedlist.py'
-				sh 'python3 ./Python/test_utils/testqueue.py'
-				sh 'python3 ./Python/test_utils/testtree.py'
-				sh 'python3 ./Python/test_utils/testpriorityqueue.py'
+				sh 'python3 ./Python/test_utils/testutils.py -v'
 			}
 		}
 
