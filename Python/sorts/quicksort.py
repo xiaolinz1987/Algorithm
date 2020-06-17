@@ -82,20 +82,6 @@ class MyQuickSort:
     def quick_sort_v3(self):
         self.__quick_sort_core_v3(0, len(self.array)-1)
 
-    def output(self):
-        print(self.array)
-
-input = list([3, 4, 14, 1, 5, 6, 7, 8, 1, -1, 0, 9, 11])
-sort = MyQuickSort(input)
-sort.quick_sort_v1()
-print("quick_sort_v1:")
-sort.output()
-sort.reset_input(input)
-sort.quick_sort_v2()
-print("quick_sort_v2:")
-sort.output()
-sort.reset_input(input)
-sort.quick_sort_v3()
-print("quick_sort_v3:")
-sort.output()
+    def get_array(self):
+        return self.array
 
