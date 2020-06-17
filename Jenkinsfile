@@ -4,7 +4,7 @@ pipeline {
 
 	stages {
 
-		stage('unit test of utils') {
+		stage('unit tests of utils') {
 			steps {
 				sh 'python3 ./Python/test_utils/testarray.py'
 				sh 'python3 ./Python/test_utils/testheap.py'
@@ -15,9 +15,9 @@ pipeline {
 			}
 		}
 
-		stage('compile sorts') {
+		stage('unit tests of sorts') {
 			steps {
-				sh 'python3 ./Python/sorts/bubblesort.py'
+				sh 'python3 ./Python/test_sorts/testbubblesort.py'
 				sh 'python3 ./Python/sorts/bucketsort.py'
 				sh 'python3 ./Python/sorts/cocktailsort.py'
 				sh 'python3 ./Python/sorts/quicksort.py'
