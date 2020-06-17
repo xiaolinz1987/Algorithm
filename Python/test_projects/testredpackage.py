@@ -11,7 +11,7 @@ class TestMyRedPackage(unittest.TestCase):
         myRedPackage = MyRedPackage(1000, 10)
         myRedPackage.divide()
         for package in myRedPackage.get_packages():
-            self.assertLess(package, 220)
+            self.assertLess(package, 250)
             self.assertGreater(package, 1)
 
 if __name__ == '__main__':
