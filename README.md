@@ -76,3 +76,9 @@ Issues:
 
 25. How to use Python Queue modules
 	https://blog.csdn.net/brucewong0516/article/details/84025027
+
+26 .How to install Docker Desktop on Windows
+	https://docs.docker.com/docker-for-windows/install/
+
+27. How to install SonarQube on Windows
+	https://docs.sonarqube.org/latest/setup/get-started-2-minutes/
